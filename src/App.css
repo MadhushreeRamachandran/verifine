@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.home-page {
   min-height: 100vh;
+
+  position: relative;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.logout-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logout-btn:hover {
+  background-color: #e8f4ff;
+  color: #007bff;
+}
+
+
+.home-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding-top: 60px;
+  height: auto;
+}
+
+
+.welcome-msg {
+  font-size: 34px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 30px;
+}
+
+
+.search-container {
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 30px;
+}
+
+.styled-search-bar {
+  width: 350px;
+  padding: 14px 24px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: white;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.styled-search-bar:focus {
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+
+.post-card {
+  background: #ffffff;
+  padding: 20px 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.post-card p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+.post-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.post-card a:hover {
+  text-decoration: underline;
+}
+
+
+.like-section {
+  margin-top: 14px;
+}
+
+.like-button {
+  background-color: #ff4f81;
   color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.like-button:hover {
+  background-color: #e13c6d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.no-posts-msg {
+  font-size: 18px;
+  color: #777;
+  margin-top: 40px;
+  font-style: italic;
 }
+
+
+
